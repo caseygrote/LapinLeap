@@ -23,6 +23,12 @@ namespace LapinLeap
         public MainWindow()
         {
             InitializeComponent();
+            inventory.game = this;
+        }
+
+        private void MapCanvas_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MapCanvas.Visibility = Visibility.Collapsed;
         }
     }
 }

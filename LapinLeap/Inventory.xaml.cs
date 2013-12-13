@@ -24,5 +24,14 @@ namespace LapinLeap
         {
             InitializeComponent();
         }
+
+        private void MAP_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            game.MapCanvas.Visibility = Visibility.Visible;
+        }
+
+
+
+        public MainWindow game { get; set; }
     }
 }

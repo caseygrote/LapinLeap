@@ -20,17 +20,20 @@ namespace LapinLeap
     /// </summary>
     public partial class Room : UserControl
     {
+        
 
-        String time = "00:00";
+        public string Time { get; set; }
 
         public Room()
         {
             InitializeComponent();
+            DoomsdayClock.Content = Time;
         }
 
         private void Grid_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             BGgrid.Background = Brushes.Blue;
+            DoomsdayClock.Content = Time;
             //CENTER THIS!
             //CHANGE TIME; CHANGe MAINGRID BG
             //CHANGE CHARA LOC

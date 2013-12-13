@@ -9,11 +9,10 @@
         <Grid x:Name="BGgrid" Background="#FFFF9898" Height="100" VerticalAlignment="Top" Margin="13,10,10,0"/>
 
         <Image Source="Resources/Photo-Video-Compact-camera-icon.png" Stretch="None" Margin="13,10,22,-10"/>
-        <Label Foreground="White" FontFamily="Franklin Gothic Heavy" Margin="2,-3,-2,0" FontSize="15" Height="113" VerticalAlignment="Top" HorizontalAlignment="Left" Width="173">
+        <Label x:Name="RoomName" Foreground="White" FontFamily="Franklin Gothic Heavy" Margin="2,-3,-2,0" FontSize="15" Height="113" VerticalAlignment="Top" HorizontalAlignment="Left" Width="173">
             Room Name
         </Label>
-        <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-3,-13,0" FontFamily="Franklin Gothic Heavy" FontSize="15" HorizontalAlignment="Right" Width="62" Height="32" VerticalAlignment="Top">
-            00:00
+        <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-3,-13,0" FontFamily="Franklin Gothic Heavy" FontSize="15" HorizontalAlignment="Right" Width="62" Height="32" VerticalAlignment="Top" Content="00:00" >
         </Label>
 
 
