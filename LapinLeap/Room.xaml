@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="LapinLeap.Room"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="150">
+    <Grid Margin="0,0,0,0" PreviewMouseDown="Grid_PreviewMouseDown">
+        <Grid x:Name="BGgrid" HorizontalAlignment="Right" Width="150" Background="#FFFF9898" Height="100" VerticalAlignment="Top"/>
+        
+        <Image Source="Resources/Photo-Video-Compact-camera-icon.png" Stretch="None" Margin="0,0,35,0"/>
+        <Label>
+            Room Name
+        </Label>
+            
+
+    </Grid>
+</UserControl>

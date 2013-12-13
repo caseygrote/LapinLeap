@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="LapinLeap.Inventory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="612" Width="268">
+    <Grid Background="#FFFF9898" >
+        <ListBox Margin="10,73,10,10" Background="#FF1A2951">
+            <ListBoxItem Foreground="White">
+                invItem
+            </ListBoxItem>
+        </ListBox>
+
+    </Grid>
+</UserControl>

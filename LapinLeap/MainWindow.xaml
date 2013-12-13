@@ -1,0 +1,12 @@
+﻿<Window xmlns:LapinLeap="clr-namespace:LapinLeap"  x:Class="LapinLeap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="555" Width="1018">
+    <Grid>
+        <Grid x:Name="bgGrid" Background="#FF1A2951">
+            <LapinLeap:Inventory HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="505" Width="222"/>
+        </Grid>
+        <LapinLeap:GameGrid Margin="242,-1113,-927,-188" />
+
+    </Grid>
+</Window>
