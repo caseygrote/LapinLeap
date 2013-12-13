@@ -20,6 +20,8 @@ namespace LapinLeap
     /// </summary>
     public partial class GameGrid : UserControl
     {
+        public MainWindow window;
+
         public GameGrid()
         {
             InitializeComponent();

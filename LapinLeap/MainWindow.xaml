@@ -7,7 +7,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid x:Name="bgGrid" Background="#FF1A2951" Margin="0,-1,0,-11"/>
-        <LapinLeap:GameGrid Margin="242,21,22,10" />
+        <LapinLeap:GameGrid x:Name="level" Margin="242,21,22,10" />
         <LapinLeap:Inventory x:Name="inventory" HorizontalAlignment="Left" Margin="21,21,0,10" Height="Auto" Width="211"/>
         <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" >
             00:00

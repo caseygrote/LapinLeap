@@ -6,11 +6,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1000">
     <Grid >
-        <Grid x:Name="BGgrid" Opacity=".25" Background="#FFCF2131" ></Grid>
-        <LapinLeap:Room Margin="25,0,0,366" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:00" />
-        <LapinLeap:Room Margin="196,0,0,366" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" >
-            
-        </LapinLeap:Room>
+        <Grid x:Name="BGgrid" Opacity="0" Background="#FFCF2131" ></Grid>
+        <Grid x:Name="RoomGrid">
+            <LapinLeap:Room x:Name="StartRoom" Margin="353,0,0,215" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:00" />
+            <LapinLeap:Room Margin="524,0,0,153" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="00:30">
+
+            </LapinLeap:Room>
+            <LapinLeap:Room Margin="524,0,0,256" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:30" />
+            <LapinLeap:Room Margin="666,0,0,153" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:00"/>
+        </Grid>
 
     </Grid>
 </UserControl>

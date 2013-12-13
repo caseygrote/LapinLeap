@@ -24,6 +24,7 @@ namespace LapinLeap
         {
             InitializeComponent();
             inventory.game = this;
+            level.window = this;
         }
 
         private void MapCanvas_PreviewMouseDown(object sender, MouseButtonEventArgs e)
