@@ -3,10 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="555" Width="1018">
     <Grid>
-        <Grid x:Name="bgGrid" Background="#FF1A2951">
-            <LapinLeap:Inventory HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="505" Width="222"/>
-        </Grid>
+        <Grid x:Name="bgGrid" Background="#FF1A2951"/>
         <LapinLeap:GameGrid Margin="242,-1113,-927,-188" />
+        <LapinLeap:Inventory HorizontalAlignment="Left" Margin="10,10,0,10" Height="Auto" Width="222"/>
+        <Grid x:Name="DoomsdayGrid" Margin="0,10,10,0" Background="#FFFF9898" Height="73" VerticalAlignment="Top" HorizontalAlignment="Right" Width="137" >
+            <Label x:Name="DoomsdayClock" Background="#FF1A2951" Foreground="White" Margin="11,10,10,10" FontFamily="Franklin Gothic Heavy" FontSize="40">
+                00:00
+            </Label>
+        </Grid>
 
     </Grid>
 </Window>

@@ -20,6 +20,9 @@ namespace LapinLeap
     /// </summary>
     public partial class Room : UserControl
     {
+
+        String time = "00:00";
+
         public Room()
         {
             InitializeComponent();
