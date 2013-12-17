@@ -23,11 +23,23 @@ namespace LapinLeap
     {
         public MainWindow window;
         Color animsave = Color.FromArgb(255, 26, 41, 81);
+        Room home;
+
 
 
         public GameGrid()
         {
+
             InitializeComponent();
+
+            StartRoom.offspring.Add(room1); StartRoom.offspring.Add(room0);
+            room1.offspring.Add(room5);
+            room5.offspring.Add(room6);
+            room0.offspring.Add(room2);
+            room2.offspring.Add(room3); room2.offspring.Add(room4);
+            room4.offspring.Add(room7); 
+            room7.offspring.Add(room8);
+
         }
 
         internal void adjustBG(string Time)
@@ -67,5 +79,8 @@ namespace LapinLeap
             //window.bgGrid.Background = new SolidColorBrush(Color.FromArgb(255, 26, hc , mc ));
             animsave =Color.FromArgb(255, 26, hc , mc );
         }
+
+    
+
     }
 }
