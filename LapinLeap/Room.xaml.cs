@@ -44,14 +44,15 @@ namespace LapinLeap
             Thickness oldMargin = roomgrid.Margin;
 
             roomgrid.Margin = new Thickness(oldMargin.Left + (oldCenter.Left - newCenter.Left),
-                oldMargin.Top + (oldCenter.Top - newCenter.Top),
+                oldMargin.Top + (oldCenter.Top - newCenter.Top),  
                 oldMargin.Right + (oldCenter.Right - newCenter.Right),
                 oldMargin.Bottom + (oldCenter.Bottom - newCenter.Bottom));
 
             game.StartRoom.BGgrid.Background = new SolidColorBrush(Color.FromArgb(255, 255, 152, 152));
             game.StartRoom = this;
             game.window.DoomsdayClock.Content = Time;
-            
+
+            game.adjustBG(Time);
            
             //CENTER THIS!
             //CHANGE TIME; CHANGe MAINGRID BG
