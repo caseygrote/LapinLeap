@@ -124,6 +124,11 @@ namespace LapinLeap
             BGgrid.Background = Brushes.Blue;
             //CHANGE CHARA LOC
         }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            DoomsdayClock.Content = Time;
+        }
     }
 
 
