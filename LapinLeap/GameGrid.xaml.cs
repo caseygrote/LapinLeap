@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -21,6 +22,8 @@ namespace LapinLeap
     public partial class GameGrid : UserControl
     {
         public MainWindow window;
+        Color animsave = Color.FromArgb(255, 26, 41, 81);
+
 
         public GameGrid()
         {
@@ -51,8 +54,17 @@ namespace LapinLeap
                 mc = 255;
             }
 
-            window.bgGrid.Background = new SolidColorBrush(Color.FromArgb(255, 26, hc , mc ));
-            
+           
+
+            ColorAnimation animation = new ColorAnimation();
+            animation.From = animsave;
+            animation.To = Color.FromArgb(255, 26, hc, mc);
+
+            animation.Duration = new Duration(TimeSpan.FromSeconds(.5));
+            window.bgGrid.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
+
+            //window.bgGrid.Background = new SolidColorBrush(Color.FromArgb(255, 26, hc , mc ));
+            animsave =Color.FromArgb(255, 26, hc , mc );
         }
     }
 }
