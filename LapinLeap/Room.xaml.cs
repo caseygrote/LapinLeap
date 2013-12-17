@@ -65,7 +65,9 @@ namespace LapinLeap
             animation.Duration = new Duration(TimeSpan.FromSeconds(.5)); 
 
             roomgrid.BeginAnimation(Grid.MarginProperty, animation);
+            
 
+           
             game.StartRoom.BGgrid.Background = new SolidColorBrush(Color.FromArgb(255, 255, 152, 152));
             game.StartRoom = this;
             game.window.DoomsdayClock.Content = Time;

@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" Height="612" Width="268">
-    <Grid Background="#FFFF9898" >
-        <ListBox Margin="10,73,10,10" Background="#FF1A2951" FontFamily="Franklin Gothic Heavy" Foreground="White" FontSize="16">
+    <Grid x:Name="bggrid"  Background="#FFFF9898" >
+        <ListBox x:Name="lb" Margin="10,73,10,10" Background="#FF1A2951" FontFamily="Franklin Gothic Heavy" Foreground="White" FontSize="16">
             <ListBoxItem PreviewMouseDown="MAP_PreviewMouseDown">
                 Map
             </ListBoxItem>

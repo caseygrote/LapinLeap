@@ -62,6 +62,8 @@ namespace LapinLeap
 
             animation.Duration = new Duration(TimeSpan.FromSeconds(.5));
             window.bgGrid.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
+            //window.inventory.bggrid.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
+            window.inventory.lb.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
 
             //window.bgGrid.Background = new SolidColorBrush(Color.FromArgb(255, 26, hc , mc ));
             animsave =Color.FromArgb(255, 26, hc , mc );
