@@ -37,7 +37,7 @@ namespace LapinLeap
             byte hc; byte mc;
             try 
             {
-                hc = Convert.ToByte(41 + 5 * (((255 - 41) * (min + hour * 60)) / (24 * 60)));
+                hc = Convert.ToByte(41 + 3 * (((255 - 41) * (min + hour * 60)) / (24 * 60)));
             }
             catch (Exception e)
             {
@@ -47,7 +47,7 @@ namespace LapinLeap
             try { 
 
              
-             mc = Convert.ToByte(81 + 3*(((255 - 81) * (min + hour * 60)) / (24 * 60)));
+             mc = Convert.ToByte(81 + 5*(((255 - 81) * (min + hour * 60)) / (24 * 60)));
                 }
             catch(Exception e)
             {
@@ -62,7 +62,6 @@ namespace LapinLeap
 
             animation.Duration = new Duration(TimeSpan.FromSeconds(.5));
             window.bgGrid.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
-            //window.inventory.bggrid.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
             window.inventory.lb.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
 
             //window.bgGrid.Background = new SolidColorBrush(Color.FromArgb(255, 26, hc , mc ));

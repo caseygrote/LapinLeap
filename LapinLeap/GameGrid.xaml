@@ -6,14 +6,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1000">
     <Grid >
-        <Grid x:Name="BGgrid" Opacity="0" Background="#FFCF2131" ></Grid>
-        <Grid x:Name="RoomGrid">
-            <LapinLeap:Room x:Name="StartRoom" Margin="353,0,0,215" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:00" />
-            <LapinLeap:Room Margin="524,0,0,153" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="00:30">
+        <Grid x:Name="BGgrid" Opacity="0" Background="#FFCF2131" Margin="-54,-129,54,129" />
+        <Grid x:Name="RoomGrid" Margin="0,10,0,0">
+
+            <LapinLeap:Room x:Name="StartRoom" Margin="258,0,0,247" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:00" />
+            <LapinLeap:Room Margin="398,0,0,185" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="00:30">
 
             </LapinLeap:Room>
-            <LapinLeap:Room Margin="524,0,0,256" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:30" />
-            <LapinLeap:Room Margin="666,0,0,153" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:00"/>
+            <LapinLeap:Room Margin="398,0,0,288" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:30" />
+            <LapinLeap:Room Margin="540,0,0,185" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:00"/>
+            <LapinLeap:Room Margin="679,0,0,224" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30"/>
+            <LapinLeap:Room Margin="679,0,0,126" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30"/>
+            <LapinLeap:Room Margin="540,0,0,327" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:00"/>
+            <LapinLeap:Room Margin="679,0,0,386" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30"/>
+            <LapinLeap:Room Margin="818,0,0,126" HorizontalAlignment="Left" Width="150" Height="98" VerticalAlignment="Bottom"  Time="02:00"/>
+            <LapinLeap:Room Margin="958,0,-108,126" HorizontalAlignment="Left" Width="150" Height="98" VerticalAlignment="Bottom"  Time="02:30"/>
         </Grid>
 
     </Grid>
