@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -37,25 +38,42 @@ namespace LapinLeap
             Grid g = (Grid)this.Parent;
             Grid roomgrid = (Grid)g.Parent;
             GameGrid game = (GameGrid)roomgrid.Parent;
+
+            ThicknessAnimation animation = new ThicknessAnimation();
             
 
             Thickness oldCenter = game.StartRoom.Margin;
             Thickness newCenter = this.Margin;
             Thickness oldMargin = roomgrid.Margin;
 
-            roomgrid.Margin = new Thickness(oldMargin.Left + (oldCenter.Left - newCenter.Left),
+            
+
+            //roomgrid.Margin =
+            Thickness newMargin= new Thickness(oldMargin.Left + (oldCenter.Left - newCenter.Left),
                 oldMargin.Top + (oldCenter.Top - newCenter.Top),  
                 oldMargin.Right + (oldCenter.Right - newCenter.Right),
                 oldMargin.Bottom + (oldCenter.Bottom - newCenter.Bottom));
+
+
+            animation.From = oldMargin;
+            animation.To = newMargin;
+
+            PowerEase pe = new PowerEase();
+            pe.EasingMode = EasingMode.EaseInOut; pe.Power=3;
+
+            animation.EasingFunction = pe;
+            animation.Duration = new Duration(TimeSpan.FromSeconds(.5)); 
+
+            roomgrid.BeginAnimation(Grid.MarginProperty, animation);
 
             game.StartRoom.BGgrid.Background = new SolidColorBrush(Color.FromArgb(255, 255, 152, 152));
             game.StartRoom = this;
             game.window.DoomsdayClock.Content = Time;
 
             game.adjustBG(Time);
-           
-            //CENTER THIS!
-            //CHANGE TIME; CHANGe MAINGRID BG
+
+            
+
             //CHANGE CHARA LOC
         }
     }
