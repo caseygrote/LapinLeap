@@ -25,8 +25,6 @@ namespace LapinLeap
         Color animsave = Color.FromArgb(255, 26, 41, 81);
         Room home;
 
-
-
         public GameGrid()
         {
 
@@ -56,11 +54,10 @@ namespace LapinLeap
                 hc = 255;
             }
 
-            try { 
-
-             
-             mc = Convert.ToByte(81 + 5*(((255 - 81) * (min + hour * 60)) / (24 * 60)));
-                }
+            try 
+            {
+                mc = Convert.ToByte(81 + 5*(((255 - 81) * (min + hour * 60)) / (24 * 60)));
+            }
             catch(Exception e)
             {
                 mc = 255;
@@ -77,7 +74,7 @@ namespace LapinLeap
             window.inventory.lb.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
 
             //window.bgGrid.Background = new SolidColorBrush(Color.FromArgb(255, 26, hc , mc ));
-            animsave =Color.FromArgb(255, 26, hc , mc );
+            animsave =Color.FromArgb(255, 26, hc , mc ); 
         }
 
     

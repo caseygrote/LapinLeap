@@ -32,9 +32,6 @@ namespace LapinLeap
             MapCanvas.Visibility = Visibility.Collapsed;
         }
 
-        private void level_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
+    
     }
 }
