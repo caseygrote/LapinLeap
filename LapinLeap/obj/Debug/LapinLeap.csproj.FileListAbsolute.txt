@@ -18,3 +18,5 @@ C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\LapinLeap_Marku
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\GameGrid.baml
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\Inventory.baml
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\Inventory.g.cs
+C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\item.baml
+C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\item.g.cs

@@ -25,6 +25,7 @@ namespace LapinLeap
 
         public string Time { get; set; }
         public List<Room> offspring = new List<Room>();
+        public GameGrid game;
 
         public Room()
         {
@@ -72,7 +73,7 @@ namespace LapinLeap
             ThicknessAnimation animation = new ThicknessAnimation();
             
 
-            Thickness oldCenter = game.StartRoom.Margin;
+            Thickness oldCenter = game.currentRoom.Margin;
             Thickness newCenter = this.Margin;
             Thickness oldMargin = roomgrid.Margin;
 
@@ -96,8 +97,8 @@ namespace LapinLeap
 
             roomgrid.BeginAnimation(Grid.MarginProperty, animation);
 
-            List<Room> desc = game.StartRoom.getalldescendents();
-            game.StartRoom.BGgrid.Background = new SolidColorBrush(Color.FromArgb(190, 255, 152, 152));
+            List<Room> desc = game.currentRoom.getalldescendents();
+            game.currentRoom.BGgrid.Background = new SolidColorBrush(Color.FromArgb(190, 255, 152, 152));
 
            // game.StartRoom.BGgrid.Background = new SolidColorBrush(Color.FromArgb(255, 255, 152, 152));
 
@@ -106,9 +107,9 @@ namespace LapinLeap
                 r.BGgrid.Background = new SolidColorBrush(Color.FromArgb(190, 255, 152, 152));
             }
 
-            game.StartRoom = this;
+            game.currentRoom = this;
 
-            desc = game.StartRoom.getalldescendents();
+            desc = game.currentRoom.getalldescendents();
 
             foreach (Room r in desc)
             {
@@ -129,6 +130,101 @@ namespace LapinLeap
         {
             DoomsdayClock.Content = Time;
         }
+
+
+        //actually causes everything to multiply, amazing
+        //private void ItemsList_Loaded(object sender, RoutedEventArgs e)
+        //{
+            
+        //        foreach (Object item in ItemsList.Items)
+        //        {
+        //            foreach (Room r in this.getalldescendents())
+        //            {
+        //            r.ItemsList.Items.Add(item);
+        //        }
+        //    }
+        //}
+
+        public void TimeConsistentAddItem(String s)
+        {
+            ItemsList.Items.Add(s);
+            List<Room> des = this.getalldescendents();
+            foreach (Room kid in des)
+            {
+                kid.ItemsList.Items.Add(s);
+            }
+        }
+
+        public void TimeConsistentAddItem(item s)
+        {
+            ItemsList.Items.Add(s);
+            List<Room> des = this.getalldescendents();
+            foreach (Room kid in des)
+            {
+                item i = new item();
+                i.itemName = s.itemName;
+                
+              kid.ItemsList.Items.Add(i);
+              //i.manual_Loaded();
+                    
+                
+            }
+            
+        }
+
+        internal void TimeConsistentRemoveItem(string p)
+        {
+            if (ItemsList.Items.Contains(p)) 
+                ItemsList.Items.Remove(p);
+            
+            List<Room> des = this.getalldescendents();
+            foreach (Room kid in des)
+            {
+                if(kid.ItemsList.Items.Contains(p))
+                    kid.ItemsList.Items.Remove(p);
+            }
+        }
+
+        internal void TimeConsistentRemoveItem(item p)
+        {
+            //if (ItemsList.Items.Contains(p))
+            //    ItemsList.Items.Remove(p);
+
+            //List<Room> des = this.getalldescendents();
+            //foreach (Room kid in des)
+            //{
+            //    if (kid.ItemsList.Items.Contains(p))
+            //        kid.ItemsList.Items.Remove(p);
+            //}
+
+
+
+            foreach (item i in ItemsList.Items)
+            {
+                if (i.itemName.Equals(p.itemName))
+                {
+                    ItemsList.Items.Remove(i);
+                }
+            }
+
+            List<Room> des = this.getalldescendents();
+
+            foreach (Room kid in des)
+            {
+                foreach (item i in kid.ItemsList.Items)
+                {
+                    if (i.itemName.Equals(p.itemName))
+                    {
+                        kid.ItemsList.Items.Remove(i);
+                    }
+                }
+            }
+
+
+        }
+
+
+
     }
 
 

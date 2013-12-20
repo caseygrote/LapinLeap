@@ -30,14 +30,32 @@ namespace LapinLeap
 
             InitializeComponent();
 
-            StartRoom.offspring.Add(room1); StartRoom.offspring.Add(room0);
+            currentRoom.offspring.Add(room1); currentRoom.offspring.Add(room0);
             room1.offspring.Add(room5);
             room5.offspring.Add(room6);
-            room0.offspring.Add(room2);
+            room0.offspring.Add(room2); 
+            //room0.ItemsList.Items.Add("test item");
+
             room2.offspring.Add(room3); room2.offspring.Add(room4);
             room4.offspring.Add(room7); 
             room7.offspring.Add(room8);
 
+            //room0.TimeConsistentAddItem("test item");
+            //room0.TimeConsistentAddItem(new item("testitem"));
+            //room0.ItemsList.Items.Add(new item("testing item add"));//ng
+            //room0.ItemsList.Items.Add(new item());
+
+
+            item testitem = new item();
+            testitem.itemName = "testitem";
+            testitem.window = window;
+            testitem.isInInv = false;
+
+            room0.TimeConsistentAddItem(testitem);
+
+            //item consTest = new item("string cons");
+
+            //room0.TimeConsistentRemoveItem("test item");
         }
 
         internal void adjustBG(string Time)
@@ -78,6 +96,7 @@ namespace LapinLeap
         }
 
     
+        
 
     }
 }

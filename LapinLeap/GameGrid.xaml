@@ -9,7 +9,7 @@
         <Grid x:Name="BGgrid" Opacity="0" Background="#FFCF2131" Margin="-54,-129,54,129" />
         <Grid x:Name="RoomGrid" Margin="0,10,0,0">
 
-            <LapinLeap:Room x:Name="StartRoom" Margin="258,0,0,247" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:00" />
+            <LapinLeap:Room x:Name="currentRoom" Margin="258,0,0,247" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:00" />
             <LapinLeap:Room  x:Name="room0" Margin="398,0,0,185" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="00:30">
 
             </LapinLeap:Room>
