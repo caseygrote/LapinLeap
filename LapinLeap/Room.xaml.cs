@@ -141,7 +141,7 @@ namespace LapinLeap
             game.window.inventory.add(s + "");
 
 
-            ItemsList.Items.Remove(s);
+            //ItemsList.Items.Remove(s);
             List<Room> des = this.getalldescendents();
 
             foreach (Room kid in des)
@@ -156,9 +156,23 @@ namespace LapinLeap
 
         }
 
-        private void RoomRemove(string s)
+        private void RoomRemove(string s) //removes first instance of specified string in room
         {
+
             ItemsList.Items.Remove(s);
+            //int itemindex =-1;
+            //foreach (string item in ItemsList.Items)
+            //{
+            //    if (s.Equals(item))
+            //        itemindex = ItemsList.Items.IndexOf(item);
+            //}
+            //try
+            //{
+            //    ItemsList.Items.RemoveAt(itemindex);
+
+            //}
+            //catch(Exception e){}
+            
         }
 
         private void ItemsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
