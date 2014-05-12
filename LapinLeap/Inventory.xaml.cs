@@ -33,5 +33,26 @@ namespace LapinLeap
 
 
         public MainWindow game { get; set; }
+
+        internal void add(string s)
+        {
+            if (s == null) return;
+            items.Items.Add(s);
+            game.yougotthis(s);
+        }
+
+        private void items_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string s = (string) items.SelectedItem;
+
+            if (s == null) return;
+            items.Items.Remove(s);
+                
+            game.game.currentRoom.TimeConsistentAddItem(s);
+            game.youdroppedthis(s);
+
+            items.SelectedItem = null;
+
+        }
     }
 }

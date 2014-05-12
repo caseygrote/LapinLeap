@@ -35,11 +35,25 @@ namespace LapinLeap
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             game.window = this;
-            foreach (string i in game.room0.ItemsList.Items)
-            {
-            }
+           
+           
         }
 
-    
+
+
+        internal void youdroppedthis(string s)
+        {
+            itempulse("you dropped your "+s);
+        }
+
+        internal void yougotthis(string s)
+        {
+            itempulse("you got a " + s);
+        }
+
+        private void itempulse(string s){
+            //DISPLAY ANIMATION 
+            //throw new NotImplementedException();
+        }
     }
 }

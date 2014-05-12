@@ -33,23 +33,6 @@ namespace LapinLeap
             DoomsdayClock.Content = Time;
         }
 
-        //returns all future events
-        //public List<Room> getalldescendents()
-        //{
-        //    List<Room> kids = new List<Room>();
-        //    //kids.Concat(offspring);
-        //    foreach (Room kid in offspring)
-        //    {
-        //        kids.Add(kid);
-        //        foreach (Room k in kid.getalldescendents())
-        //        {
-        //            kids.Add(k);
-        //        }
-        //    }
-
-        //    return kids;
-
-        //}
 
         public List<Room> getalldescendents()
         {
@@ -129,24 +112,18 @@ namespace LapinLeap
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             DoomsdayClock.Content = Time;
+
+            Grid g = (Grid)this.Parent; Grid gg = (Grid)g.Parent;
+            game = (GameGrid)gg.Parent;
         }
 
 
-        //actually causes everything to multiply, amazing
-        //private void ItemsList_Loaded(object sender, RoutedEventArgs e)
-        //{
-            
-        //        foreach (Object item in ItemsList.Items)
-        //        {
-        //            foreach (Room r in this.getalldescendents())
-        //            {
-        //            r.ItemsList.Items.Add(item);
-        //        }
-        //    }
-        //}
 
         public void TimeConsistentAddItem(String s)
         {
+
+            if (s == null) 
+                return;
             ItemsList.Items.Add(s);
             List<Room> des = this.getalldescendents();
             foreach (Room kid in des)
@@ -160,7 +137,11 @@ namespace LapinLeap
         internal void TimeConsistentRemoveItem(string s)
         {
 
+            if (s == null) return;
+            game.window.inventory.add(s + "");
 
+
+            ItemsList.Items.Remove(s);
             List<Room> des = this.getalldescendents();
 
             foreach (Room kid in des)
@@ -184,6 +165,9 @@ namespace LapinLeap
         {
             String s = (string) ((ListBox)sender).SelectedItem;
 
+            if (s == null) return;
+            TimeConsistentRemoveItem(s);
+            ((ListBox)sender).SelectedItem = null;
         }
 
 
