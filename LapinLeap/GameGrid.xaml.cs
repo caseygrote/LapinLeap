@@ -46,10 +46,8 @@ namespace LapinLeap
             //room0.ItemsList.Items.Add(new item());
 
 
-            item testitem = new item();
-            testitem.itemName = "testitem";
-            testitem.window = window;
-            testitem.isInInv = false;
+            string testitem = "test item";
+           
 
             room0.TimeConsistentAddItem(testitem);
 

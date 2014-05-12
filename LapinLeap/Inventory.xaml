@@ -13,7 +13,6 @@
             <ListBoxItem>
                 invItem
             </ListBoxItem>-->
-            <LapinLeap:item itemName="invtest" />
         </ListBox>
 
     </Grid>

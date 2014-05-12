@@ -155,71 +155,34 @@ namespace LapinLeap
             }
         }
 
-        public void TimeConsistentAddItem(item s)
+       
+
+        internal void TimeConsistentRemoveItem(string s)
         {
-            ItemsList.Items.Add(s);
+
+
             List<Room> des = this.getalldescendents();
+
             foreach (Room kid in des)
             {
-                item i = new item();
-                i.itemName = s.itemName;
-                
-              kid.ItemsList.Items.Add(i);
-              //i.manual_Loaded();
-                    
-                
+                kid.RoomRemove(s);
             }
-            
+
+
+            this.RoomRemove(s);
+
+
+
         }
 
-        internal void TimeConsistentRemoveItem(string p)
+        private void RoomRemove(string s)
         {
-            if (ItemsList.Items.Contains(p)) 
-                ItemsList.Items.Remove(p);
-            
-            List<Room> des = this.getalldescendents();
-            foreach (Room kid in des)
-            {
-                if(kid.ItemsList.Items.Contains(p))
-                    kid.ItemsList.Items.Remove(p);
-            }
+            ItemsList.Items.Remove(s);
         }
 
-        internal void TimeConsistentRemoveItem(item p)
+        private void ItemsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if (ItemsList.Items.Contains(p))
-            //    ItemsList.Items.Remove(p);
-
-            //List<Room> des = this.getalldescendents();
-            //foreach (Room kid in des)
-            //{
-            //    if (kid.ItemsList.Items.Contains(p))
-            //        kid.ItemsList.Items.Remove(p);
-            //}
-
-
-
-            foreach (item i in ItemsList.Items)
-            {
-                if (i.itemName.Equals(p.itemName))
-                {
-                    ItemsList.Items.Remove(i);
-                }
-            }
-
-            List<Room> des = this.getalldescendents();
-
-            foreach (Room kid in des)
-            {
-                foreach (item i in kid.ItemsList.Items)
-                {
-                    if (i.itemName.Equals(p.itemName))
-                    {
-                        kid.ItemsList.Items.Remove(i);
-                    }
-                }
-            }
-
+            String s = (string) ((ListBox)sender).SelectedItem;
 
         }
 

@@ -8,13 +8,13 @@ C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\
 LapinLeap
 none
 false
-DEBUG;TRACE
+CODE_ANALYSIS;DEBUG;TRACE
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\App.xaml
-5-1007012796
+4-1556578477
 
-13899897469
+12-976651312
 141012385901
-GameGrid.xaml;Inventory.xaml;item.xaml;MainWindow.xaml;Room.xaml;
+GameGrid.xaml;Inventory.xaml;MainWindow.xaml;Room.xaml;
 
-True
+False
 

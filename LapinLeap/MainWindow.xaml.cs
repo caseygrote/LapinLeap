@@ -35,9 +35,8 @@ namespace LapinLeap
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             game.window = this;
-            foreach (item i in game.room0.ItemsList.Items)
+            foreach (string i in game.room0.ItemsList.Items)
             {
-                i.window = this;
             }
         }
 

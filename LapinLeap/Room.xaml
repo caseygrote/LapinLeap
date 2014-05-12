@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="113" d:DesignWidth="173">
+             d:DesignHeight="113" d:DesignWidth="173"
+        >
+    
     <Grid Margin="0,0,0,-5" PreviewMouseDown="Grid_PreviewMouseDown" Loaded="Grid_Loaded">
         <Grid x:Name="BGgrid" Background="#FFFF9898" Margin="13,10,10,8"/>
 
@@ -13,7 +15,7 @@
             Room Name
         </Label>
         <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-3,-13,0" FontFamily="Franklin Gothic Heavy" FontSize="15" HorizontalAlignment="Right" Width="62" Height="32" VerticalAlignment="Top" Content="00:00" />
-        <ListBox x:Name="ItemsList" Margin="7,20,79,0" Background="Transparent" BorderBrush="White" Foreground="White" FontFamily="Franklin Gothic Heavy" FontSize="13"  >
+        <ListBox x:Name="ItemsList" Margin="7,20,79,0" Background="Transparent" BorderBrush="White" Foreground="White" FontFamily="Franklin Gothic Heavy" FontSize="13" SelectionMode="Single" SelectionChanged="ItemsList_SelectionChanged">
        </ListBox>
 
 
