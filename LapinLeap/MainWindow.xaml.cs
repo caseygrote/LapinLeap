@@ -55,6 +55,7 @@ namespace LapinLeap
         private void itempulse(string s){
 
             pulser.Content = s;
+            pulser.HorizontalContentAlignment = System.Windows.HorizontalAlignment.Left;
 
             ColorAnimation animation = new ColorAnimation();
             animation.From = Color.FromArgb(255, 255,255,255);
