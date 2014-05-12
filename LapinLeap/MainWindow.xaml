@@ -17,5 +17,6 @@
                 a map ?? incredible
             </Label>
         </Canvas>
+        <Label x:Name="pulser"   Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="989" Content="you dropped something" Foreground="#00000000"  />
     </Grid>
 </Window>

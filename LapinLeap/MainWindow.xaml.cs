@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -52,6 +53,17 @@ namespace LapinLeap
         }
 
         private void itempulse(string s){
+
+            pulser.Content = s;
+
+            ColorAnimation animation = new ColorAnimation();
+            animation.From = Color.FromArgb(255, 255,255,255);
+            animation.To = Color.FromArgb(0, 255, 255, 255);
+
+            animation.Duration = new Duration(TimeSpan.FromSeconds(.5));
+            pulser.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, animation);
+            
+
             //DISPLAY ANIMATION 
             //throw new NotImplementedException();
         }
