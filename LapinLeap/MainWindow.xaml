@@ -25,11 +25,13 @@
                 <ImageBrush ImageSource="Resources/stand.png" />
             </Image.OpacityMask>
         </Image>
-        <Image Source="Resources/left.gif" Height="193" Margin="10,293,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  >
+        <Image x:Name="leftanim" gif:ImageBehavior.AnimatedSource="Resources/left.gif" Height="193" Margin="10,293,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  >
             <Image.OpacityMask>
                 <ImageBrush ImageSource="Resources/left.gif" Stretch="Uniform" />
             </Image.OpacityMask>
         </Image>
-        <Image   Height="193" Margin="10,293,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  />
+        <Image x:Name="rightanim" gif:ImageBehavior.AnimatedSource="Resources/right.gif" Height="193" Margin="10,293,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  />
+
+        
     </Grid>
 </Window>
