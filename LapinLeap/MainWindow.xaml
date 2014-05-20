@@ -1,7 +1,10 @@
-﻿<Window xmlns:LapinLeap="clr-namespace:LapinLeap"  x:Class="LapinLeap.MainWindow"
+﻿<Window xmlns:LapinLeap="clr-namespace:LapinLeap"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="600" Width="1018" Loaded="Window_Loaded">
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:Custom="http://schemas.microsoft.com/surface/2008"  x:Class="LapinLeap.MainWindow"
+        Title="LapinLeap" Height="600" Width="1018" Loaded="Window_Loaded"
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -9,19 +12,24 @@
         <Grid x:Name="bgGrid" Background="#FF1A2951" Margin="0,-1,0,-11"/>
         <LapinLeap:GameGrid x:Name="game" Margin="242,21,22,10"  />
         <LapinLeap:Inventory x:Name="inventory" HorizontalAlignment="Left" Margin="21,21,0,10" Height="Auto" Width="211"/>
-        <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" >
-            00:00
-        </Label>
+        <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" Content="00:00" />
         <Canvas x:Name="MapCanvas" Background="#FFDE0404"  Margin="242,21,22,10" Visibility="Collapsed" PreviewMouseDown="MapCanvas_PreviewMouseDown" >
-            <Label>
-                a map ?? incredible
-            </Label>
+            <Label Content="a map ?? incredible"/>
         </Canvas>
         <Canvas x:Name="PhoneCanvas" Background="#FFDE0404"  Margin="242,21,22,10" Visibility="Collapsed" PreviewMouseDown="PhoneCanvas_PreviewMouseDown">
-            <Label>
-                this one is for making calls haha
-            </Label>
+            <Label Content="this one is for making calls haha"/>
         </Canvas>
         <Label x:Name="pulser"   Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="989" Content="you dropped something" Foreground="#00000000" HorizontalContentAlignment="Left" />
+        <Image Source="Resources/stand.png" Height="190" Margin="21,296,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="82"  >
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/stand.png" />
+            </Image.OpacityMask>
+        </Image>
+        <Image Source="Resources/left.gif" Height="193" Margin="10,293,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  >
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/left.gif" Stretch="Uniform" />
+            </Image.OpacityMask>
+        </Image>
+        <Image   Height="193" Margin="10,293,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  />
     </Grid>
 </Window>
