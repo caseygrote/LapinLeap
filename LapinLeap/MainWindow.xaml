@@ -12,15 +12,15 @@
         <Grid x:Name="bgGrid" Background="#FF1A2951" Margin="0,-1,0,-11"/>
         <LapinLeap:GameGrid x:Name="game" Margin="242,21,22,10"  />
         <LapinLeap:Inventory x:Name="inventory" HorizontalAlignment="Left" Margin="21,21,0,10" Height="Auto" Width="211"/>
-        <Grid Margin="77,21,723,101">
-            <LapinLeap:avatar x:Name="avatar" />
+        <Grid Margin="33,33,790,91" IsHitTestVisible="False">
+            <LapinLeap:avatar x:Name="avatar" IsHitTestVisible="False" />
         </Grid>
         <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" Content="00:00" />
         <Canvas x:Name="MapCanvas" Background="#801A2951"  Margin="21,21,22,10" Visibility="Collapsed" PreviewMouseDown="MapCanvas_PreviewMouseDown" >
             <LapinLeap:map></LapinLeap:map>
         </Canvas>
         
-        <Label x:Name="pulser"   Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="989" Content="you dropped something" Foreground="#00000000" HorizontalContentAlignment="Left" />
+        <Label x:Name="pulser"   Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="989" Content="you dropped something" Foreground="#00000000" HorizontalContentAlignment="Left" IsHitTestVisible="False" />
         <Canvas x:Name="PhoneCanvas" Background="#801A2951"  Margin="21,21,22,10" PreviewMouseDown="PhoneCanvas_PreviewMouseDown" Visibility="Hidden" />
         <LapinLeap:phone x:Name="cell" Visibility="Hidden" Margin="242,165,505,26" />
     </Grid>

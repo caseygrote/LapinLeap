@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
 using WpfAnimatedGif;
 
 namespace LapinLeap
@@ -25,15 +26,18 @@ namespace LapinLeap
         
 
         public string Time { get; set; }
+        public string roomname { get; set; }
         public List<Room> offspring = new List<Room>();
         public GameGrid game;
         public string[] winConditions = new string[5];
-        
+        public Hashtable actions = new Hashtable();
 
         public Room()
         {
             InitializeComponent();
             DoomsdayClock.Content = Time;
+            RoomName.Content = roomname;
+
         }
 
 
@@ -48,6 +52,11 @@ namespace LapinLeap
 
         }
 
+        public void addAction(Room dest, string action)
+        {
+            actions.Add(action, dest);
+            optionsList.Items.Add(action);
+        }
 
         //move 
         private void Grid_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -113,7 +122,9 @@ namespace LapinLeap
             BGgrid.Background = Brushes.Blue;
             //CHANGE CHARA LOC
 
-            if (oldCenter.Left < newCenter.Left)//traveling forward
+            if (oldCenter.Left == newCenter.Left)
+                game.window.avatar.standstill();
+            else if (oldCenter.Left < newCenter.Left)//traveling forward
                 game.window.avatar.fwd();
             else
                 game.window.avatar.bwd();
@@ -129,7 +140,9 @@ namespace LapinLeap
             game = (GameGrid)gg.Parent;
          }
             catch(Exception error)
-         {}        }
+         {}
+         RoomName.Content = roomname;
+        }
 
 
 
@@ -165,9 +178,6 @@ namespace LapinLeap
 
 
             this.RoomRemove(s);
-
-
-
         }
 
         private void RoomRemove(string s) //removes first instance of specified string in room
@@ -200,6 +210,80 @@ namespace LapinLeap
 
         private void optionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            String s = (string)((ListBox)sender).SelectedItem;
+            if (s == null) return;
+            Room selectedroom =(Room)actions[s];
+            (selectedroom).Visibility = Visibility.Visible;
+            ((ListBox)sender).SelectedItem = null;
+
+            //v sloppy, revist later
+
+            DoomsdayClock.Content = Time;
+            Grid g = (Grid)this.Parent;
+            Grid roomgrid = (Grid)g.Parent;
+            GameGrid game = (GameGrid)roomgrid.Parent;
+
+            ThicknessAnimation animation = new ThicknessAnimation();
+
+
+            Thickness oldCenter = game.currentRoom.Margin;
+            Thickness newCenter = selectedroom.Margin;
+            Thickness oldMargin = roomgrid.Margin;
+
+
+
+            //roomgrid.Margin =
+            Thickness newMargin = new Thickness(oldMargin.Left + (oldCenter.Left - newCenter.Left),
+                oldMargin.Top + (oldCenter.Top - newCenter.Top),
+                oldMargin.Right + (oldCenter.Right - newCenter.Right),
+                oldMargin.Bottom + (oldCenter.Bottom - newCenter.Bottom));
+
+
+            animation.From = oldMargin;
+            animation.To = newMargin;
+
+            PowerEase pe = new PowerEase();
+            pe.EasingMode = EasingMode.EaseInOut; pe.Power = 3;
+
+            animation.EasingFunction = pe;
+            animation.Duration = new Duration(TimeSpan.FromSeconds(.5));
+
+            roomgrid.BeginAnimation(Grid.MarginProperty, animation);
+
+            List<Room> desc = game.currentRoom.getalldescendents();
+            game.currentRoom.BGgrid.Background = new SolidColorBrush(Color.FromArgb(190, 255, 152, 152));
+
+            // game.StartRoom.BGgrid.Background = new SolidColorBrush(Color.FromArgb(255, 255, 152, 152));
+
+            foreach (Room r in desc)
+            {
+                r.BGgrid.Background = new SolidColorBrush(Color.FromArgb(190, 255, 152, 152));
+            }
+
+            game.currentRoom = selectedroom;
+
+            desc = game.currentRoom.getalldescendents();
+
+            foreach (Room r in desc)
+            {
+                r.BGgrid.Background = new SolidColorBrush(Color.FromArgb(255, 255, 152, 152));
+            }
+
+
+            game.window.DoomsdayClock.Content = Time;
+
+            game.adjustBG(Time);
+
+
+            selectedroom.BGgrid.Background = Brushes.Blue;
+            //CHANGE CHARA LOC
+
+            if (oldCenter.Left == newCenter.Left)
+                game.window.avatar.standstill();
+            else if (oldCenter.Left < newCenter.Left)//traveling forward
+                game.window.avatar.fwd();
+            else
+                game.window.avatar.bwd();
 
         }
 

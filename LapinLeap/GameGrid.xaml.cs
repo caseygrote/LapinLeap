@@ -40,13 +40,24 @@ namespace LapinLeap
             room4.offspring.Add(room7); 
             room7.offspring.Add(room8);
 
+            room0.addAction(room2, "wait here");
+            room4.addAction(room7, "wait here");
+            room7.addAction(room8, "wait still");
+
+            room2.addAction(room3, "dont wait");
+            currentRoom.addAction(room1, "something");
+            currentRoom.addAction(room0, "not that");
+            room1.addAction(room5, "do thing");
+            room5.addAction(room6, "go to 6");
+
+
             //room0.TimeConsistentAddItem("test item");
             //room0.TimeConsistentAddItem(new item("testitem"));
             //room0.ItemsList.Items.Add(new item("testing item add"));//ng
             //room0.ItemsList.Items.Add(new item());
 
 
-            string testitem = "test item";
+            string testitem = "item";
            
 
             room0.TimeConsistentAddItem(testitem);

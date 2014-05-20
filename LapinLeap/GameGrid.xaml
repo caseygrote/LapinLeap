@@ -6,18 +6,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1000">
     <Grid >
-        <Grid x:Name="BGgrid" Opacity="0" Background="#FFCF2131" Margin="-54,-129,54,129" />
+        <Grid x:Name="BGgrid" Opacity="0" Background="#FFCF2131" Margin="-57,-130,57,130" />
         <Grid x:Name="RoomGrid" Margin="0,10,0,0">
-            <LapinLeap:Room x:Name="currentRoom" Margin="258,0,0,247" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:00" />
-            <LapinLeap:Room  x:Name="room0" Margin="398,0,0,185" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="00:30"/>
-            <LapinLeap:Room x:Name="room1"  Margin="398,0,0,288" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:30" />
-            <LapinLeap:Room x:Name="room2"  Margin="540,0,0,185" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:00"/>
-            <LapinLeap:Room x:Name="room3"  Margin="679,0,0,224" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30"/>
-            <LapinLeap:Room x:Name="room4"  Margin="679,0,0,126" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30"/>
-            <LapinLeap:Room x:Name="room5"  Margin="540,0,0,327" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:00"/>
-            <LapinLeap:Room x:Name="room6"  Margin="679,0,0,386" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30"/>
-            <LapinLeap:Room x:Name="room7"  Margin="818,0,0,126" HorizontalAlignment="Left" Width="150" Height="98" VerticalAlignment="Bottom"  Time="02:00"/>
-            <LapinLeap:Room x:Name="room8"  Margin="958,0,-108,126" HorizontalAlignment="Left" Width="150" Height="98" VerticalAlignment="Bottom"  Time="02:30"/>
+            <LapinLeap:Room roomname="home" x:Name="currentRoom" Margin="258,0,0,247" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:00" />
+            <LapinLeap:Room roomname="room0" x:Name="room0" Margin="398,0,0,185" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="00:30" Visibility="Hidden"/>
+            <LapinLeap:Room roomname="room1" x:Name="room1"  Margin="398,0,0,288" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom" Time="00:30" Visibility="Hidden" />
+            <LapinLeap:Room roomname="room0" x:Name="room2"  Margin="540,0,0,185" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:00" Visibility="Hidden"/>
+            <LapinLeap:Room roomname="room3" x:Name="room3"  Margin="679,0,0,224" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30" Visibility="Hidden"/>
+            <LapinLeap:Room roomname="room4" x:Name="room4"  Margin="679,0,0,126" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30" Visibility="Hidden"/>
+            <LapinLeap:Room roomname="room5" x:Name="room5"  Margin="540,0,0,327" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:00" Visibility="Hidden"/>
+            <LapinLeap:Room roomname="room6" x:Name="room6"  Margin="679,0,0,386" HorizontalAlignment="Left" Width="149" Height="98" VerticalAlignment="Bottom"  Time="01:30" Visibility="Hidden"/>
+            <LapinLeap:Room roomname="room4" x:Name="room7"  Margin="818,0,0,126" HorizontalAlignment="Left" Width="150" Height="98" VerticalAlignment="Bottom"  Time="02:00" Visibility="Hidden"/>
+            <LapinLeap:Room roomname="room4" x:Name="room8"  Margin="958,0,-108,126" HorizontalAlignment="Left" Width="150" Height="98" VerticalAlignment="Bottom"  Time="02:30" Visibility="Hidden"/>
         </Grid>
 
     </Grid>
