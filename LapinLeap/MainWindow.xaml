@@ -17,6 +17,11 @@
                 a map ?? incredible
             </Label>
         </Canvas>
+        <Canvas x:Name="PhoneCanvas" Background="#FFDE0404"  Margin="242,21,22,10" Visibility="Collapsed" PreviewMouseDown="PhoneCanvas_PreviewMouseDown">
+            <Label>
+                this one is for making calls haha
+            </Label>
+        </Canvas>
         <Label x:Name="pulser"   Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="989" Content="you dropped something" Foreground="#00000000" HorizontalContentAlignment="Left" />
     </Grid>
 </Window>

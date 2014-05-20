@@ -26,6 +26,7 @@ namespace LapinLeap
         public string Time { get; set; }
         public List<Room> offspring = new List<Room>();
         public GameGrid game;
+        
 
         public Room()
         {
@@ -114,8 +115,11 @@ namespace LapinLeap
             DoomsdayClock.Content = Time;
 
             Grid g = (Grid)this.Parent; Grid gg = (Grid)g.Parent;
+         try{
             game = (GameGrid)gg.Parent;
-        }
+         }
+            catch(Exception error)
+         {}        }
 
 
 

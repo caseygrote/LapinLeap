@@ -54,5 +54,11 @@ namespace LapinLeap
             items.SelectedItem = null;
 
         }
+
+        private void PHONE_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            game.PhoneCanvas.Visibility = Visibility.Visible;
+
+        }
     }
 }

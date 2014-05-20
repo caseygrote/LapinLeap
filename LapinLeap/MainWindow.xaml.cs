@@ -68,5 +68,10 @@ namespace LapinLeap
             //DISPLAY ANIMATION 
             //throw new NotImplementedException();
         }
+
+        private void PhoneCanvas_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+     PhoneCanvas.Visibility = Visibility.Collapsed;
+        }
     }
 }

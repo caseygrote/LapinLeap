@@ -1,4 +1,3 @@
-C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\LapinLeap.csprojResolveAssemblyReference.cache
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\MainWindow.baml
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\Room.baml
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\MainWindow.g.cs
@@ -20,3 +19,4 @@ C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\Inventory.baml
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\Inventory.g.cs
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\bin\Debug\LapinLeap.exe.CodeAnalysisLog.xml
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\bin\Debug\LapinLeap.exe.lastcodeanalysissucceeded
+C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\LapinLeap.csprojResolveAssemblyReference.cache

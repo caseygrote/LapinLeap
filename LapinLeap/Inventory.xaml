@@ -5,15 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" Height="612" Width="268">
     <Grid x:Name="bggrid"  Background="#FFFF9898" >
-        <ListBox x:Name="items" Margin="10,86,10,10" Background="#FF1A2951" FontFamily="Franklin Gothic Heavy" Foreground="White" FontSize="16" SelectionChanged="items_SelectionChanged">
-            <!--<ListBoxItem PreviewMouseDown="MAP_PreviewMouseDown">
-                Map
-            </ListBoxItem>
-            
-            <ListBoxItem>
-                invItem
-            </ListBoxItem>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="items" Margin="10,10,10,86" Background="#FF1A2951" FontFamily="Franklin Gothic Heavy" Foreground="White" FontSize="16" SelectionChanged="items_SelectionChanged" Grid.ColumnSpan="2">
+
         </ListBox>
+        <Grid Height="71" Margin="10,0,5,10" VerticalAlignment="Bottom" PreviewMouseDown="MAP_PreviewMouseDown" Opacity="0.75" Background="#FF1A2951">
+            <Label  FontFamily="Franklin Gothic Heavy" Foreground="#FFFF9898" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Map
+            </Label>
+        </Grid>
+        <Grid Height="71" Margin="5,0,10,10" VerticalAlignment="Bottom" PreviewMouseDown="PHONE_PreviewMouseDown" Opacity="0.75" Background="#FF1A2951" Grid.Column="1">
+            <Label  FontFamily="Franklin Gothic Heavy" Foreground="#FFFF9898" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Phone"/>
+        </Grid>
 
     </Grid>
 </UserControl>
