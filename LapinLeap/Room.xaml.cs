@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAnimatedGif;
 
 namespace LapinLeap
 {
@@ -46,6 +47,8 @@ namespace LapinLeap
 
         }
 
+
+        //move 
         private void Grid_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             //BGgrid.Background = Brushes.Blue;
@@ -108,6 +111,12 @@ namespace LapinLeap
 
             BGgrid.Background = Brushes.Blue;
             //CHANGE CHARA LOC
+
+            if (oldCenter.Left < newCenter.Left)//traveling forward
+                game.window.avatar.fwd();
+            else
+                game.window.avatar.bwd();
+
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)

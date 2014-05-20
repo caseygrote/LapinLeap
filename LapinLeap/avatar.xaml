@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="LapinLeap.avatar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Image x:Name="standing" Source="Resources/stand.png" Height="190" Margin="21,296,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="82"  >
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/stand.png" />
+            </Image.OpacityMask>
+        </Image>
+
+        <!-- hopping animations; must be hidden to use visual designer-->
+        <Image x:Name="leftfwdanim"  Height="193" Margin="10,293,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  
+               Visibility="Hidden" 
+            gif:ImageBehavior.AnimatedSource="Resources/left.gif"
+               gif:ImageBehavior.RepeatBehavior="1x"
+               gif:ImageBehavior.AutoStart="False">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/left.gif" Stretch="Uniform" />
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="leftbwdanim"  Height="193" Margin="291,293,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="114"  
+               Visibility="Hidden" RenderTransformOrigin="0.5,0.5" 
+               gif:ImageBehavior.AnimatedSource="Resources/left.gif"
+               gif:ImageBehavior.RepeatBehavior="1x"
+               gif:ImageBehavior.AutoStart="False">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/left.gif" Stretch="Uniform" />
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="rightfwdanim" Height="193" Margin="153,296,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  
+               Visibility="Hidden" gif:ImageBehavior.AnimatedSource="Resources/right.gif"
+               gif:ImageBehavior.RepeatBehavior="1x"
+               gif:ImageBehavior.AutoStart="False"
+               gif:ImageBehavior.AnimationCompleted="AnimationCompleted"
+               >
+
+        </Image>
+        <Image x:Name="rightbwdanim" Height="193" Margin="153,296,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"  
+               Visibility="Hidden" 
+                gif:ImageBehavior.AnimatedSource="Resources/right.gif"
+               gif:ImageBehavior.RepeatBehavior="1x"
+               gif:ImageBehavior.AutoStart="False"
+               gif:ImageBehavior.AnimationCompleted="AnimationCompleted"
+               >
+
+        </Image>
+
+    </Grid>
+</UserControl>
