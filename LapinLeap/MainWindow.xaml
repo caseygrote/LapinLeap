@@ -12,7 +12,7 @@
         <Grid x:Name="bgGrid" Background="#FF1A2951" Margin="0,-1,0,-11"/>
         <LapinLeap:GameGrid x:Name="game" Margin="242,21,22,10"  />
         <LapinLeap:Inventory x:Name="inventory" HorizontalAlignment="Left" Margin="21,21,0,10" Height="Auto" Width="211"/>
-        <Grid Margin="21,21,785,101">
+        <Grid Margin="77,21,723,101">
             <LapinLeap:avatar x:Name="avatar" />
         </Grid>
         <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" Content="00:00" />
