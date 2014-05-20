@@ -73,6 +73,7 @@ namespace LapinLeap
         private void PhoneCanvas_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
              PhoneCanvas.Visibility = Visibility.Collapsed;
+             cell.Visibility = Visibility.Collapsed;
         }
 
 

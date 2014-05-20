@@ -25,3 +25,7 @@ C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\bin\Debug\WpfAnimatedGif.
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\bin\Debug\WpfAnimatedGif.xml
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\avatar.baml
 C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\avatar.g.cs
+C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\phone.baml
+C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\phone.g.cs
+C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\map.baml
+C:\Users\beast-jr\Documents\GitHub\LapinLeap\LapinLeap\obj\Debug\map.g.cs

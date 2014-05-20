@@ -16,13 +16,12 @@
             <LapinLeap:avatar x:Name="avatar" />
         </Grid>
         <Label x:Name="DoomsdayClock"  Foreground="White" Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" Content="00:00" />
-        <Canvas x:Name="MapCanvas" Background="#FFDE0404"  Margin="242,21,22,10" Visibility="Collapsed" PreviewMouseDown="MapCanvas_PreviewMouseDown" >
-            <Label Content="a map ?? incredible"/>
+        <Canvas x:Name="MapCanvas" Background="#801A2951"  Margin="21,21,22,10" Visibility="Collapsed" PreviewMouseDown="MapCanvas_PreviewMouseDown" >
+            <LapinLeap:map></LapinLeap:map>
         </Canvas>
-        <Canvas x:Name="PhoneCanvas" Background="#FFDE0404"  Margin="242,21,22,10" Visibility="Collapsed" PreviewMouseDown="PhoneCanvas_PreviewMouseDown">
-            <Label Content="this one is for making calls haha"/>
-        </Canvas>
+        
         <Label x:Name="pulser"   Margin="0,-13,0,0" FontFamily="Franklin Gothic Heavy" FontSize="50" Height="110" VerticalAlignment="Top" HorizontalAlignment="Right" Width="989" Content="you dropped something" Foreground="#00000000" HorizontalContentAlignment="Left" />
-       
+        <Canvas x:Name="PhoneCanvas" Background="#801A2951"  Margin="21,21,22,10" PreviewMouseDown="PhoneCanvas_PreviewMouseDown" Visibility="Hidden" />
+        <LapinLeap:phone x:Name="cell" Visibility="Hidden" Margin="242,165,505,26" />
     </Grid>
 </Window>

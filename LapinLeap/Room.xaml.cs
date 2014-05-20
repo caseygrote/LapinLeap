@@ -27,6 +27,7 @@ namespace LapinLeap
         public string Time { get; set; }
         public List<Room> offspring = new List<Room>();
         public GameGrid game;
+        public string[] winConditions = new string[5];
         
 
         public Room()
@@ -195,6 +196,11 @@ namespace LapinLeap
             if (s == null) return;
             TimeConsistentRemoveItem(s);
             ((ListBox)sender).SelectedItem = null;
+        }
+
+        private void optionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
 

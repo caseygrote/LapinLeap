@@ -58,7 +58,7 @@ namespace LapinLeap
         private void PHONE_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             game.PhoneCanvas.Visibility = Visibility.Visible;
-
+            game.cell.Visibility = Visibility.Visible;
         }
     }
 }
